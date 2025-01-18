@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>THANATHEP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --light-blue: #f1f5ff;
+      }
+
+      * {
+        box-sizing: border-box;
+        font-family: "Work Sans", math !important;
+      }
+      body {
+        background-color: #fff;
+      }
+      .container {
+        max-width: 998px;
+      }
+      .navbar-toggler,
+      .navbar-toggler:hover {
+        border: none;
+      }
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+      .nav-link {
+        font-weight: bold;
+        border-radius: 8px;
+        padding: 0.5rem;
+      }
+      .nav-link:hover {
+        background-color: var(--light-blue);
+        color: #000;
+      }
+      @media (min-width: 992px) {
+        .navbar-nav {
+          gap: 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header mt-2">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+          <button
+            class="navbar-toggler mb-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" aria-current="page" href="/resume.html"
+                  >Resume</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact.html">Contact</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown link
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="content mt-2">
+      <div class="container h-screen">
+        <div class="card p-4 shadow border-0">
+          <div class="header">
+            <h1>THANATHEP SUWANNASORN</h1>
+            <h5 class="fst-italic px-2">Full Stack Web Developer</h5>
+          </div>
+
+          <div class="border-bottom mb-3"></div>
+
+          <div class="experience">
+            <h5 class="text-uppercase">green seeds company limited</h5>
+            <div class="row justify-content-between">
+              <div class="col-auto">
+                <span class="fst-italic text-uppercase">
+                  web developer and it support
+                </span>
+              </div>
+              <div class="col-auto">
+                <span class="fst-italic text-secondary">
+                  Oct 2023 - Present
+                </span>
+              </div>
+            </div>
+            <div>
+              <ul>
+                <li>
+                  <span
+                    >Developed a website for viewing company asset information
+                    using Laravel Framework.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Designed and implemented a website for storing seed test
+                    results using Laravel Framework.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Provided IT support, troubleshooting, and basic computer
+                    maintenance
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- /experience -->
+          <div class="border-bottom mb-3"></div>
+
+          <div class="project">
+            <h5 class="text-uppercase">project</h5>
+            <div class="project-list">
+              <div class="">
+                <span class="fst-italic text-uppercase fw-bold">
+                  Food Delivery Application (Ionic Angular TypeScript)
+                </span>
+              </div>
+              <ul>
+                <li>
+                  <span
+                    >Developed mobile application enabling multiple restaurant
+                    food delivery orders.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Integrated secure payment system with slip upload
+                    verification.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Implemented real-time order tracking and notification
+                    system.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-list">
+              <div class="">
+                <span class="fst-italic text-uppercase fw-bold">
+                  Animal Food Application Web Dashboard(Laravel framework)
+                </span>
+              </div>
+              <ul>
+                <li>
+                  <span
+                    >Designed and built inventory management dashboard for pet
+                    food business.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Developed automated reporting system for stock management.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    Created user-friendly interface for inventory tracking.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /project -->
+          <div class="border-bottom mb-3"></div>
+
+          <div class="skills">
+            <h5 class="text-uppercase">Technical Skills</h5>
+            <div class="programing-languages">
+              <ul>
+                <li>
+                  Programming Languages: C, Java, TypeScript, JavaScript, PHP,
+                  Python, HTML, CSS
+                </li>
+                <li>Framework and Libraries: Ionic, Angular, Laravel</li>
+                <li>Databases: SQL, MS SQL, MySQL</li>
+                <li>Version Control: Git</li>
+              </ul>
+            </div>
+          </div>
+          <div class="border-bottom mb-3"></div>
+
+          <div class="education">
+            <h5 class="text-uppercase">education</h5>
+            <div class="d-flex">
+              <label class="fs-6 text-uppercase">
+                Kasetsart University
+                <span class="fs-6 text-secondary">
+                  Chalermphrakiat Sakon Nakhon Province Campus
+                </span>
+              </label>
+            </div>
+            <ul>
+              <li>Bachelor of Computer Science</li>
+            </ul>
+          </div>
+
+          <div class="border-bottom mb-3"></div>
+
+          <div class="contact">
+            <h5 class="text-uppercase">contact</h5>
+            <div class="row">
+              <div class="col-auto">
+                <strong>Email</strong> : oohtshon@gmail.com
+              </div>
+              <div class="col-auto"><strong>Phone</strong> : 095-271-5531</div>
+            </div>
+          </div>
+
+          <div class="mb-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script></script>
+  </body>
+</html>
