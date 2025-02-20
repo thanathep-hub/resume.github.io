@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vam ui</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- google font style -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style css-->
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Mali";
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* For IE, Edge and Firefox */
+      .scrollbar-hide {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+
+      .card-item {
+        /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,*/
+        /* rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;*/
+        border: 1px solid #fbf9fa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <!-- navbar -->
+      <nav
+        class="fixed top-0 mb-2 z-30 w-full bg-white border-b border-gray-200 sm:hidden"
+      >
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+          <div class="flex items-center justify-between">
+            <!-- left navbar -->
+            <div class="flex items-center justify-start rtl:justify-end">
+              <button
+                data-drawer-target="logo-sidebar"
+                data-drawer-toggle="logo-sidebar"
+                aria-controls="logo-sidebar"
+                type="button"
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              >
+                <span class="sr-only">Open sidebar</span>
+                <svg
+                  class="w-6 h-6"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                  ></path>
+                </svg>
+              </button>
+              <!-- <a href="https://flowbite.com" class="flex ms-2 md:me-24">
+                <img
+                  src="https://flowbite.com/docs/images/logo.svg"
+                  class="h-8 me-3"
+                  alt="FlowBite Logo"
+                />
+                <span
+                  class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap"
+                  >VAM UI</span
+                >
+              </a> -->
+            </div>
+
+            <!-- right navbar -->
+            <div class="flex items-center">
+              <div class="flex items-center ms-3">
+                <div>
+                  <button
+                    type="button"
+                    class="flex text-md rounded-full focus:ring-4 focus:ring-gray-300"
+                    aria-expanded="false"
+                    data-dropdown-toggle="dropdown-user"
+                  >
+                    <span class="sr-only">Open user menu</span>
+                    <svg
+                      class="w-6 h-6 text-gray-800"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 20a7.966 7.966 0 0 1-5.002-1.756l.002.001v-.683c0-1.794 1.492-3.25 3.333-3.25h3.334c1.84 0 3.333 1.456 3.333 3.25v.683A7.966 7.966 0 0 1 12 20ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10c0 5.5-4.44 9.963-9.932 10h-.138C6.438 21.962 2 17.5 2 12Zm10-5c-1.84 0-3.333 1.455-3.333 3.25S10.159 13.5 12 13.5c1.84 0 3.333-1.455 3.333-3.25S13.841 7 12 7Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-sm shadow-sm"
+                  id="dropdown-user"
+                >
+                  <div class="px-4 py-3" role="none">
+                    <p class="text-sm text-gray-900" role="none">เอก ธุมากร</p>
+                    <p
+                      class="text-sm font-medium text-gray-900 truncate"
+                      role="none"
+                    >
+                      naek1234@gmail.com
+                    </p>
+                  </div>
+                  <ul class="py-1" role="none">
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        role="menuitem"
+                        >Dashboard</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        role="menuitem"
+                        >Settings</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        role="menuitem"
+                        >Sign out</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- search bar -->
+          <div class="search-bar my-2">
+            <div class="flex items-center mb-3">
+              <label for="simple-search" class="sr-only">Search</label>
+              <div class="relative w-full">
+                <div
+                  class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-orange-600"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="simple-search"
+                  class="bg-gray-50 border border-gray-200 text-gray-900 text-sm shadow-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
+                  placeholder="เลขทะเบียน, ชื่อผู้ใช้, ยี่ห้อ..."
+                  required
+                />
+              </div>
+              <button
+                class="p-2.5 ms-1 text-sm rounded-lg shadow-xs border border-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300"
+              >
+                <svg
+                  class="w-6 h-6 text-gray-600"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    d="M20 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6h-2m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4m16 6H10m0 0a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m0 0H4"
+                  />
+                </svg>
+
+                <span class="sr-only">Search</span>
+              </button>
+            </div>
+          </div>
+          <!-- / search bar -->
+        </div>
+        <div
+          class="tab-list border-t border-gray-200 uppercase overflow-x-auto scrollbar-hide whitespace-nowrap"
+        >
+          <ul class="flex text-xs font-medium text-center text-gray-500">
+            <li class="me-2">
+              <a
+                href="#"
+                class="inline-block px-3 py-2 text-gray-900 font-bold rounded-lg active"
+                aria-current="page"
+              >
+                รายการโปรด
+              </a>
+            </li>
+            <li class="me-2">
+              <a
+                href="#"
+                class="inline-block px-3 py-2 rounded-lg hover:text-gray-900 hover:bg-gray-100"
+              >
+                ทั้งหมด
+              </a>
+            </li>
+            <li class="me-2">
+              <a
+                href="#"
+                class="inline-block px-3 py-2 rounded-lg hover:text-gray-900 hover:bg-gray-100"
+              >
+                TOYOTA
+              </a>
+            </li>
+            <li class="me-2">
+              <a
+                href="#"
+                class="inline-block px-3 py-2 rounded-lg hover:text-gray-900 hover:bg-gray-100"
+              >
+                NISSAN
+              </a>
+            </li>
+            <li class="me-2">
+              <a
+                href="#"
+                class="inline-block px-3 py-2 rounded-lg hover:text-gray-900 hover:bg-gray-100"
+              >
+                Hyundai
+              </a>
+            </li>
+            <li class="me-2">
+              <a
+                href="#"
+                class="inline-block px-3 py-2 rounded-lg hover:text-gray-900 hover:bg-gray-100"
+              >
+                Ford
+              </a>
+            </li>
+            <li class="me-2">
+              <a
+                href="#"
+                class="inline-block px-3 py-2 rounded-lg hover:text-gray-900 hover:bg-gray-100"
+              >
+                BMW
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- sidebar -->
+      <aside
+        id="logo-sidebar"
+        class="fixed top-0 left-0 z-40 w-64 h-screen pt-8 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0"
+        aria-label="Sidebar"
+      >
+        <!-- icon bar -->
+        <div class="flex mb-3">
+          <a href="" class="flex px-3 md:me-24">
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              class="h-8 me-3"
+              alt="FlowBite Logo"
+            />
+            <span
+              class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap"
+              >VAM UI</span
+            >
+          </a>
+        </div>
+        <!-- border bottom -->
+        <div class="border-b border-gray-200"></div>
+
+        <!-- menu list -->
+        <div class="h-full px-3 pb-4 overflow-y-auto bg-white">
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 21"
+                >
+                  <path
+                    d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"
+                  />
+                  <path
+                    d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"
+                  />
+                </svg>
+                <span class="ms-3">Dashboard</span>
+              </a>
+            </li>
+            <!-- <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-gray-900 rounded-lghover:bg-gray-100 group"
+              >
+                <svg
+                  class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"
+                  />
+                </svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
+                <span
+                  class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full"
+                  >Pro</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-gray-900 rounded-lg"
+              >
+                <svg
+                  class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z"
+                  />
+                </svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
+                <span
+                  class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full"
+                  >3</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100"
+              >
+                <svg
+                  class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 18"
+                >
+                  <path
+                    d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"
+                  />
+                </svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">Users</span>
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- main -->
+    <!-- main -->
+    <div class="main" style="margin-top: 10rem">
+      <div class="sm:ml-64">
+        <div class="p-4 rounded-lg sm:mt-[56px]">
+          <!-- col 12 -->
+          <div
+            class="flex text-xs text-gray-600 justify-end items-center w-full mb-2"
+          >
+            <p>ผลการค้นหา</p>
+            <svg
+              class="ps-2 w-6 h-6 text-xs text-gray-600"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6h8m-8 6h8m-8 6h8M4 16a2 2 0 1 1 3.321 1.5L4 20h5M4 5l2-1v6m-2 0h4"
+              />
+            </svg>
+          </div>
+
+          <!-- example grid col 4 -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+            style="margin-bottom: 4rem"
+          >
+            <!-- Car Rental Card -->
+
+            <div
+              class="card-item border shadow-sm border-gray-200 col-span-3 max-w-sm bg-white rounded-xl overflow-hidden hover:bg-blue-100"
+            >
+              <div class="flex">
+                <div
+                  class="card-img p-2"
+                  style="max-width: 120px; max-height: 120px"
+                >
+                  <img
+                    class="rounded object-cover w-full"
+                    src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?auto=format&fit=crop&q=80&w=1000"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+
+                <div class="card-detail">
+                  <h2 class="text-md font-bold text-gray-900 pt-2 mb-2">
+                    KIA Sonet 2021<span
+                      class="ms-1 bg-gray-100 text-gray-800 text-xs font-medium me-2 rounded-sm"
+                    >
+                      KIA
+                    </span>
+                  </h2>
+
+                  <div class="status-bage mb-2 px-1">
+                    <ul class="max-w-md space-y-1 list-inside">
+                      <li class="flex items-center text-xs text-gray-500">
+                        <svg
+                          class="w-3.5 h-3.5 me-2 text-xs text-green-500 shrink-0"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+                          />
+                        </svg>
+                        พร้อมใช้งาน
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="location mb-2 flex text-xs items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-500"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="ml-1 text-gray-600">Green Seed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-item border shadow-sm border-gray-200 col-span-3 max-w-sm bg-white rounded-xl overflow-hidden hover:bg-blue-100"
+            >
+              <div class="flex">
+                <div
+                  class="card-img p-2"
+                  style="max-width: 120px; max-height: 120px"
+                >
+                  <img
+                    class="rounded object-cover w-full"
+                    src="https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fmazda-media-s3.s3.ap-southeast-1.amazonaws.com%2Fs3fs-public%2F2024-11%2FMazda3_BPRM_BGWMRAA_46G_BAC_EXT_High_PNG.webp%3FVersionId%3DRK20im9MjZ12vjQJ.sa2lNiWlID6wgv0&w=384&q=100"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+
+                <div class="card-detail">
+                  <h2 class="text-md font-bold text-gray-900 pt-2 mb-2">
+                    MAZDA3 SEDAN<span
+                      class="ms-1 bg-gray-100 text-gray-800 text-xs font-medium me-2 rounded-sm"
+                    >
+                      MAZDA
+                    </span>
+                  </h2>
+
+                  <div class="status-bage mb-2 px-1">
+                    <ul class="max-w-md space-y-1 list-inside">
+                      <li class="flex items-center text-xs text-gray-500">
+                        <svg
+                          class="w-3.5 h-3.5 me-2 text-xs text-green-500 shrink-0"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+                          />
+                        </svg>
+                        พร้อมใช้งาน
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="location mb-2 flex text-xs items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-500"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="ml-1 text-gray-600">Green Seed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-item border shadow-sm border-gray-200 col-span-3 max-w-sm bg-white rounded-xl overflow-hidden hover:bg-blue-100"
+            >
+              <div class="flex">
+                <div
+                  class="card-img p-2"
+                  style="max-width: 120px; max-height: 120px"
+                >
+                  <img
+                    class="rounded object-cover w-full"
+                    src="https://www.honda.co.th/uploads/car_models/grade/1723359037_193.jpg"
+                    alt=""
+                    style="height: 100%"
+                  />
+                </div>
+
+                <div class="card-detail">
+                  <h2 class="text-md font-bold text-gray-900 pt-2 mb-2">
+                    Honda Civic HEV RS<span
+                      class="ms-1 bg-gray-100 text-gray-800 text-xs font-medium me-2 rounded-sm"
+                    >
+                      honda
+                    </span>
+                  </h2>
+
+                  <div class="status-bage mb-2 px-1">
+                    <ul class="max-w-md space-y-1 list-inside">
+                      <li class="flex items-center text-xs text-gray-500">
+                        <svg
+                          class="w-3.5 h-3.5 me-2 text-xs text-green-500 shrink-0"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+                          />
+                        </svg>
+                        พร้อมใช้งาน
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="location mb-2 flex text-xs items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-500"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="ml-1 text-gray-600">Green Seed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- body -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!-- script -->
+  </body>
+</html>
