@@ -496,84 +496,104 @@
             </div>
 
             <div
-              class="card-item border border-gray-200 col-span-3 max-w-sm bg-white rounded-xl overflow-hidden shadow-md hover:bg-blue-100"
+              class="card-item col-span-3 max-w-sm bg-white rounded-xl overflow-hidden shadow-md hover:bg-gray-100"
             >
-              <div class="flex">
-                <div
-                  class="card-img p-2"
-                  style="max-width: 120px; max-height: 120px"
-                >
-                  <img
-                    class="rounded object-cover w-full"
-                    src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?auto=format&fit=crop&q=80&w=1000"
-                    alt=""
-                    style="height: 100%"
-                  />
+              <!-- Card Header with Image -->
+              <div class="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?auto=format&fit=crop&q=80&w=1000"
+                  alt="KIA Sonet 2021"
+                  class="w-full h-48 object-cover"
+                />
+
+                <!-- Unlimited miles badge -->
+                <div class="absolute top-3" style="right: 0.75rem">
+                  <span
+                    class="bg-white text-green-600 text-sm font-medium px-3 py-1 rounded-full"
+                    >พร้อมใช้งาน</span
+                  >
                 </div>
 
-                <div class="card-detail">
-                  <h2 class="text-md font-bold text-gray-900 pt-2 mb-2">
-                    KIA Sonet 2021<span
-                      class="ms-1 bg-gray-100 text-gray-800 text-xs font-medium me-2 rounded-sm"
-                    >
-                      KIA
-                    </span>
-                  </h2>
+                <!-- Favorite button -->
+                <button
+                  type="button"
+                  class="absolute bottom-3 bg-white p-1 rounded-full shadow-md"
+                  style="right: 0.75rem"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-sm text-red-500"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    />
+                  </svg>
+                </button>
+              </div>
 
-                  <div class="flex mb-2 text-center">
-                    <svg
-                      class="w-5 h-5 text-gray-600"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-width="2"
-                        d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                      />
-                    </svg>
+              <!-- Card Content -->
+              <div class="p-2">
+                <h2 class="text-md font-bold text-gray-900 mb-2">
+                  KIA Sonet 2021<span
+                    class="ms-1 bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm"
+                    >KIA</span
+                  >
+                </h2>
 
-                    <span class="ml-1 text-xs text-gray-600">เอก ธุมากร</span>
+                <div class="flex space-x-4 mb-2">
+                  <!-- Location info -->
+                  <div class="flex justify-between content-center w-full">
+                    <div class="flex pe-2 items-center text-xs">
+                      <svg
+                        class="w-6 h-6 text-gray-400"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-width="2"
+                          d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                      </svg>
+
+                      <span class="ml-1 text-gray-600">เอก ธุมากร</span>
+                    </div>
+                    <div class="flex text-xs items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 text-blue-500"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span class="ml-1 text-gray-600">Green Seed</span>
+                    </div>
                   </div>
+                </div>
 
-                  <div class="status-bage mb-2 px-1">
-                    <ul class="max-w-md space-y-1 list-inside">
-                      <li class="flex items-center text-xs text-gray-500">
-                        <svg
-                          class="w-3.5 h-3.5 me-2 text-xs text-green-500 shrink-0"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
-                          />
-                        </svg>
-                        พร้อมใช้งาน
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="location mb-2 flex text-xs items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 text-blue-500"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
+                <!-- Price and CTA -->
+                <div class="flex items-center justify-between mt-2 hidden">
+                  <div class="text-2xl font-bold text-gray-900">
+                    $31<span class="text-lg font-normal text-gray-600"
+                      >/Day</span
                     >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="ml-1 text-gray-600">Green Seed</span>
                   </div>
+                  <button
+                    class="bg-gray-900 text-white px-5 py-2 rounded-md font-medium"
+                  >
+                    Book Now
+                  </button>
                 </div>
               </div>
             </div>
