@@ -35,11 +35,6 @@
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
       }
-
-      .card-item {
-        /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,*/
-        /* rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;*/
-      }
     </style>
   </head>
   <body>
@@ -401,6 +396,8 @@
       <div class="sm:ml-64">
         <div class="p-4 rounded-lg sm:mt-[56px]">
           <!-- col 12 -->
+
+          <!-- result title -->
           <div
             class="flex text-xs text-gray-600 justify-end items-center w-full mb-2"
           >
@@ -424,12 +421,12 @@
             </svg>
           </div>
 
-          <!-- example grid col 4 -->
+          <!-- card body col 4 -->
           <div
             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
             style="margin-bottom: 4rem"
           >
-            <!-- Car Rental Card -->
+            <!-- Car Card List -->
 
             <div
               class="card-item border border-gray-200 col-span-3 max-w-sm bg-white rounded-xl overflow-hidden hover:bg-blue-100"
@@ -441,78 +438,45 @@
                 >
                   <img
                     class="rounded object-cover w-full"
-                    src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?auto=format&fit=crop&q=80&w=1000"
+                    src="https://www.prachachat.net/wp-content/uploads/2024/03/IMG_5528-630x420.jpeg"
                     alt=""
                     style="height: 100%"
                   />
                 </div>
 
                 <div class="card-detail">
-                  <h2 class="text-md font-bold text-gray-900 pt-2 mb-2">
-                    KIA Sonet 2021<span
-                      class="ms-1 bg-gray-100 text-gray-800 text-xs font-medium me-2 rounded-sm"
+                  <h2 class="text-sm font-bold text-gray-900 pt-2 mb-2">
+                    รถขนเมล็ดพันธุ์
+                    <!-- <span
+                      class="ms-1 bg-gray-100 text-gray-800 text-xs font-medium me-2 rounded-sm uppercase"
                     >
-                      KIA
-                    </span>
+                      toyota
+                    </span> -->
                   </h2>
 
                   <div class="flex mb-2 text-center">
-                    <svg
-                      class="w-5 h-5 text-gray-600"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
+                    <span class="ml-1 text-xs text-gray-600">
+                      <strong>เลขทะเบียน : </strong>กข 1234</span
                     >
-                      <path
-                        stroke="currentColor"
-                        stroke-width="2"
-                        d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                      />
-                    </svg>
-
-                    <span class="ml-1 text-xs text-gray-600">เอก ธุมากร</span>
+                  </div>
+                  <div class="flex mb-2 text-center">
+                    <span class="ml-1 text-xs text-gray-600"
+                      ><strong>ยี่ห้อ : </strong>
+                      <span class="bg-gray-200 uppercase rounded-sm px-1"
+                        >toyota</span
+                      ></span
+                    >
                   </div>
 
-                  <div class="status-bage mb-2 px-1">
-                    <ul class="max-w-md space-y-1 list-inside">
-                      <li class="flex items-center text-xs text-gray-500">
-                        <svg
-                          class="w-3.5 h-3.5 me-2 text-xs text-green-500 shrink-0"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
-                          />
-                        </svg>
-                        พร้อมใช้งาน
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="location mb-2 flex text-xs items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 text-blue-500"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
+                  <div class="flex mb-2 text-center">
+                    <span class="ml-1 text-xs text-gray-600 uppercase"
+                      ><strong>ผู้ใช้งาน : </strong>เอก ธุมากร</span
                     >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="ml-1 text-gray-600">Green Seed</span>
                   </div>
                 </div>
               </div>
             </div>
+
             <div
               class="card-item border border-gray-200 col-span-3 max-w-sm bg-white rounded-xl overflow-hidden hover:bg-blue-100"
             >
@@ -523,78 +487,45 @@
                 >
                   <img
                     class="rounded object-cover w-full"
-                    src="https://www.mazda.co.th/_next/image?url=https%3A%2F%2Fmazda-media-s3.s3.ap-southeast-1.amazonaws.com%2Fs3fs-public%2F2024-11%2FMazda3_BPRM_BGWMRAA_46G_BAC_EXT_High_PNG.webp%3FVersionId%3DRK20im9MjZ12vjQJ.sa2lNiWlID6wgv0&w=384&q=100"
+                    src="https://media.roddonjai.com/campaign/2.H1.png_0c95bd80-fd71-482c-8199-b062b62b7ad3"
                     alt=""
                     style="height: 100%"
                   />
                 </div>
 
                 <div class="card-detail">
-                  <h2 class="text-md font-bold text-gray-900 pt-2 mb-2">
-                    MAZDA3 SEDAN<span
-                      class="ms-1 bg-gray-100 text-gray-800 text-xs font-medium me-2 rounded-sm"
+                  <h2 class="text-sm font-bold text-gray-900 pt-2 mb-2">
+                    รถ Hyundai H-1
+                    <!-- <span
+                      class="ms-1 bg-gray-100 text-gray-800 text-xs font-medium me-2 rounded-sm uppercase"
                     >
-                      KIA
-                    </span>
+                      toyota
+                    </span> -->
                   </h2>
 
                   <div class="flex mb-2 text-center">
-                    <svg
-                      class="w-5 h-5 text-gray-600"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
+                    <span class="ml-1 text-xs text-gray-600">
+                      <strong>เลขทะเบียน : </strong>สก 7894</span
                     >
-                      <path
-                        stroke="currentColor"
-                        stroke-width="2"
-                        d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                      />
-                    </svg>
-
-                    <span class="ml-1 text-xs text-gray-600">เอก ธุมากร</span>
+                  </div>
+                  <div class="flex mb-2 text-center">
+                    <span class="ml-1 text-xs text-gray-600"
+                      ><strong>ยี่ห้อ : </strong>
+                      <span class="bg-gray-200 uppercase rounded-sm px-1"
+                        >Hyundai</span
+                      ></span
+                    >
                   </div>
 
-                  <div class="status-bage mb-2 px-1">
-                    <ul class="max-w-md space-y-1 list-inside">
-                      <li class="flex items-center text-xs text-gray-500">
-                        <svg
-                          class="w-3.5 h-3.5 me-2 text-xs text-green-500 shrink-0"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
-                          />
-                        </svg>
-                        พร้อมใช้งาน
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="location mb-2 flex text-xs items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 text-blue-500"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
+                  <div class="flex mb-2 text-center">
+                    <span class="ml-1 text-xs text-gray-600 uppercase"
+                      ><strong>ผู้ใช้งาน : </strong>เอก ธุมากร</span
                     >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="ml-1 text-gray-600">Green Seed</span>
                   </div>
                 </div>
               </div>
             </div>
+
             <div
               class="card-item border border-gray-200 col-span-3 max-w-sm bg-white rounded-xl overflow-hidden hover:bg-blue-100"
             >
@@ -605,74 +536,40 @@
                 >
                   <img
                     class="rounded object-cover w-full"
-                    src="https://www.honda.co.th/uploads/car_models/grade/1723359037_193.jpg"
+                    src="https://www.mercedes-benz.co.th/content/dam/hq/passengercars/cars/c-class/c-class-saloon-w206-pi/overview/exterior-highlights/06-2022/images/mercedes-benz-c-class-w206-exterior-highlight-3302x1858-06-2022.jpg/1673598147183.jpg?im=Resize=(1680);Crop,rect=(0,0,1680,945)"
                     alt=""
                     style="height: 100%"
                   />
                 </div>
 
                 <div class="card-detail">
-                  <h2 class="text-md font-bold text-gray-900 pt-2 mb-2">
-                    Honda Civic HEV RS<span
-                      class="ms-1 bg-gray-100 text-gray-800 text-xs font-medium me-2 rounded-sm"
+                  <h2 class="text-sm font-bold text-gray-900 pt-2 mb-2">
+                    รถส่วนตัวในบริษัท
+                    <!-- <span
+                      class="ms-1 bg-gray-100 text-gray-800 text-xs font-medium me-2 rounded-sm uppercase"
                     >
-                      honda
-                    </span>
+                      toyota
+                    </span> -->
                   </h2>
 
                   <div class="flex mb-2 text-center">
-                    <svg
-                      class="w-5 h-5 text-gray-600"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
+                    <span class="ml-1 text-xs text-gray-600">
+                      <strong>เลขทะเบียน : </strong> สก 7777</span
                     >
-                      <path
-                        stroke="currentColor"
-                        stroke-width="2"
-                        d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                      />
-                    </svg>
-
-                    <span class="ml-1 text-xs text-gray-600">เอก ธุมากร</span>
+                  </div>
+                  <div class="flex mb-2 text-center">
+                    <span class="ml-1 text-xs text-gray-600"
+                      ><strong>ยี่ห้อ : </strong>
+                      <span class="bg-gray-200 uppercase rounded-sm px-1"
+                        >Mercedes-Benz</span
+                      ></span
+                    >
                   </div>
 
-                  <div class="status-bage mb-2 px-1">
-                    <ul class="max-w-md space-y-1 list-inside">
-                      <li class="flex items-center text-xs text-gray-500">
-                        <svg
-                          class="w-3.5 h-3.5 me-2 text-xs text-green-500 shrink-0"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
-                          />
-                        </svg>
-                        พร้อมใช้งาน
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="location mb-2 flex text-xs items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 text-blue-500"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
+                  <div class="flex mb-2 text-center">
+                    <span class="ml-1 text-xs text-gray-600 uppercase"
+                      ><strong>ผู้ใช้งาน : </strong>เอก ธุมากร</span
                     >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="ml-1 text-gray-600">Green Seed</span>
                   </div>
                 </div>
               </div>
